@@ -1,0 +1,48 @@
+body {
+    background: rgb(236, 236, 236);
+}
+
+.container {
+    margin: 20vh auto 0;
+    width: 60%;
+    box-shadow: inset 0px 0px 6px 0px;
+    background: white;
+}
+
+.tab {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0 auto;
+
+    &__item {
+        list-style: none;
+        flex-grow: 1;
+        cursor: pointer;
+        padding: 5px;
+
+        &:not(:last-of-type) {
+            border-right: 1px solid black;
+        }
+    }
+
+    &__item.is-active {
+        color: rgb(28, 81, 255);
+        border-bottom: 3px solid rgb(28, 81, 255);
+        transition: all 0.3s ease-out;
+    }
+}
+
+
+.panel {
+    &__item {
+        display: none;
+    }
+
+    &__item.is-show {
+        display: block;
+        padding: 5px;
+        height: 100px;
+    }
+}
